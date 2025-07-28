@@ -1,0 +1,30 @@
+"sdg_object_20250724-155751":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155751"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 25748
+
+"sdg_object_20250724-155743":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155743"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 25839
+
+"sdg_object_20250724-155720":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155720"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 26304
+
+"sdg_object_20250724-155711":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155711"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 25888
+
+"sdg_object_20250718-010527":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250718-010527"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 10557
+
+"sdg_object_20250716-100028":
+  data_path: "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250716-100028"
+  data_description: "Nominal bowtie" 
+  num_datapoints: 63003 
+  

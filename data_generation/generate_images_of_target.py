@@ -1,4 +1,4 @@
-# ~/.local/share/ov/pkg/isaac-sim-4.5.0/python.sh data_generation/target_image_generation.py 
+# ~/.local/share/ov/pkg/isaac-sim-4.5.0/python.sh data_generation/generate_images_of_target.py 
 
 
 # reference: https://docs.omniverse.nvidia.com/py/replicator/1.11.35/source/extensions/omni.replicator.core/docs/API.html#module-omni.replicator.core 

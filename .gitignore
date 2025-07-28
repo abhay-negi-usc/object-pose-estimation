@@ -1,2 +1,5 @@
 data_generation/data
 data_generation/assets 
+*.pyc
+wandb/*
+*.tar
