@@ -3,3 +3,5 @@ data_generation/assets
 *.pyc
 wandb/*
 *.tar
+segmentation_model/training_validation_images
+model_training/segmentation_model/training_validation_images

@@ -1073,10 +1073,10 @@ data_folders = [
     # bowtie nominal 
     "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155751",
     "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155743",
-    "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155720",
-    "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155711",
-    "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250718-010527",
-    "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250716-100028",
+    # "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155720",
+    # "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250724-155711",
+    # "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250718-010527",
+    # "/home/nom4d/object-pose-estimation/data_generation/data/sdg_object_20250716-100028",
 ]
 
 # define OUT_DIR based on current date and time 

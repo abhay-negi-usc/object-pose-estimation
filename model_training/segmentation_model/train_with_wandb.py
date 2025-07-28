@@ -18,23 +18,23 @@ import wandb
 DATA_DIR = "/home/nom4d/object-pose-estimation/data_generation/training_data/data_20250726-221153/" 
 TRAIN_IMG_DIR = f"{DATA_DIR}/train/rgb"
 TRAIN_MASK_DIR = f"{DATA_DIR}/train/seg"
-VAL_IMG_DIR = f"{DATA_DIR}/val/rgb"
-VAL_MASK_DIR = f"{DATA_DIR}/val/seg"
+VAL_IMG_DIR = f"{DATA_DIR}/train/rgb" # FIXME: update to use train images
+VAL_MASK_DIR = f"{DATA_DIR}/train/seg"
 # SAVE_DIR = "./segmentation_model/models/"
-SAVE_DIR = "/home/nom4d/marker_ws/segmentation_checkpoints/"
-LOAD_DIR = "/home/nom4d/marker_ws/segmentation_checkpoints/"
+SAVE_DIR = "/home/nom4d/object-pose-estimation/model_training/segmentation_model/checkpoints/"
+LOAD_DIR = "/home/nom4d/object-pose-estimation/model_training/segmentation_model/checkpoints/"
 SAVE_FREQ = 1000 
 
-LEARNING_RATE = 1e-5 
+LEARNING_RATE = 1e-7 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu" 
-BATCH_SIZE = 4 
+BATCH_SIZE = 8
 NUM_EPOCHS = 1000
 num_epoch_dont_save = 0 
-NUM_WORKERS = 8
+NUM_WORKERS = 0
 IMAGE_HEIGHT = 480 
 IMAGE_WIDTH = 640 
 PIN_MEMORY = True 
-LOAD_MODEL = True                            
+LOAD_MODEL = True                             
 
 def train_fn(loader, model, optimizer, loss_fn, scaler, epoch): 
     loop = tqdm(loader) # progress bar 
@@ -122,7 +122,7 @@ def main():
 
     if LOAD_MODEL: 
         # load_checkpoint(torch.load("./segmentation_model/models/my_checkpoint_20250329.pth.tar"), model)
-        load_checkpoint(torch.load(os.path.join(LOAD_DIR,"my_checkpoint_multimarker_epoch_0_batch_9000.pth.tar")), model)
+        load_checkpoint(torch.load(os.path.join(LOAD_DIR,"my_checkpoint_multimarker_epoch_1_batch_1000.pth.tar")), model)
         accuracy = 0.0
     else: 
         accuracy = 0.0 
@@ -151,7 +151,7 @@ def main():
             }, os.path.join(SAVE_DIR, f"my_checkpoint_multimarker_epoch_{epoch}.pth.tar"))  # Save with epoch and accuracy
 
             # Optionally save some predictions
-            saved_images_dir = "./segmentation_model/training_validation_images/" 
+            saved_images_dir = "./model_training/segmentation_model/training_validation_images/" 
             os.makedirs(saved_images_dir, exist_ok=True)
             save_predictions_as_imgs(
                 val_loader, model, folder=saved_images_dir, device=DEVICE, num_datapoints=10
@@ -169,7 +169,7 @@ if __name__ == "__main__":
             "epochs": NUM_EPOCHS,
             "image_height": 480,
             "image_width": 640,
-            "num_workers": 8,
+            "num_workers": 0,
             "pin_memory": True,
             "train_img_dir": TRAIN_IMG_DIR,
             "train_mask_dir": TRAIN_MASK_DIR,
